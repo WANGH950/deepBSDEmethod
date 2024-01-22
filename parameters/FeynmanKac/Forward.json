@@ -1,0 +1,26 @@
+{
+    "Positional_func": {
+        "equation_params": {
+            "D0": 2,
+            "nmin": 3,
+            "dim": 3,
+            "alpha": 0.5
+        },
+        "model_params": {
+            "n": [7,7],
+            "x": [[0,0,0],[0,0,0]],
+            "p": [-10,10],
+            "t": 0,
+            "T": 0.5,
+            "N": 50
+        },
+        "train_params": {
+            "epoch": 60000,
+            "batch_size": 2048,
+            "learning_rate": 0.0005,
+            "change_lr": false,
+            "lr_change": 0
+        },
+        "model_num": 1
+    }
+}

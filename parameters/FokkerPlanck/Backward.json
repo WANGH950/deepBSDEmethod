@@ -1,0 +1,74 @@
+{
+    "Discrete": {
+        "equation_params": {
+            "D0": 5,
+            "nmin": 3,
+            "dim": 3,
+            "alpha": 1
+        },
+        "model_params": {
+            "n": [10,10],
+            "x": [[0,0,0],[0,0,0]],
+            "t": 0,
+            "T": 1,
+            "N": 50
+        },
+        "train_params": {
+            "epoch": 20000,
+            "batch_size": 128,
+            "learning_rate": 0.0002,
+            "change_lr": false,
+            "lr_change": 0,
+            "n": [[10]],
+            "x": [[0,0,0]]
+        }
+    },
+    "Continue": {
+        "equation_params": {
+            "D0": 5,
+            "nmin": 3,
+            "dim": 2,
+            "alpha": 1
+        },
+        "model_params": {
+            "n": [5,5],
+            "x": [[-3,-3],[3,3]],
+            "t": 0,
+            "T": 1,
+            "N": 50
+        },
+        "train_params": {
+            "epoch": 40000,
+            "batch_size": 1024,
+            "learning_rate": 0.001,
+            "change_lr": true,
+            "lr_change": 0.0001,
+            "n": [[5]],
+            "x": [[0,0]]
+        }
+    },
+    "High_dimensional": {
+        "equation_params": {
+            "D0": 20,
+            "nmin": 3,
+            "dim": 100,
+            "alpha": 1
+        },
+        "model_params": {
+            "n": [10,10],
+            "x": [[0],[0]],
+            "t": 0,
+            "T": 0.5,
+            "N": 25
+        },
+        "train_params": {
+            "epoch": 40000,
+            "batch_size": 64,
+            "learning_rate": 0.0004,
+            "change_lr": false,
+            "lr_change": 0,
+            "n": [[10]],
+            "x": [[0]]
+        }
+    }
+}
