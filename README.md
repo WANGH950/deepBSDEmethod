@@ -21,7 +21,7 @@ with some specified terminal condition $u(n,x,T) = g(n,x)$. Here $\mathcal{T}_n$
 $$
 \mathcal{T}_nf(n) = \left\{
     \begin{aligned}
-      &\beta(n)f(n-1) + \alpha(n)f(n+1) - (\beta(n) + \alpha(n))f(n),& n\geq 1,\\
+      &\alpha(n)(f(n+1) - f(n)) + \beta(n)(f(n-1) - f(n)),& n\geq 1,\\
       &\alpha(0)\left(f(1)-f(0)\right),& n=0.
     \end{aligned}\right.
 $$
