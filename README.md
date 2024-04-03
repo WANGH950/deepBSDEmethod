@@ -19,11 +19,11 @@ $$
 with some specified terminal condition $u(n,x,T) = g(n,x)$. Here $\mathcal{T}_n$ represents the operator with respect to the discrete variable $n$, defined as
 
 $$
-\mathcal{T}_nf(n) = \left\{
-    \begin{aligned}
-      &\alpha(n)(f(n+1) - f(n)) + \beta(n)(f(n-1) - f(n)),& n\geq 1,\\
-      &\alpha(0)\left(f(1)-f(0)\right),& n=0.
-    \end{aligned}\right.
+\mathcal{T}_nf(n) = 
+    \begin{cases}
+      \alpha(n)(f(n+1) - f(n)) + \beta(n)(f(n-1) - f(n)),& n\geq 1,\\
+      \alpha(0)\left(f(1)-f(0)\right),& n=0.
+    \end{cases}
 $$
 
 # How to use?
