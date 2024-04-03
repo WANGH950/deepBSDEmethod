@@ -41,26 +41,6 @@ class DeepBSDER(deepBSDE):
             u[delta_N<0] = u[delta_N<0] + disc_u[:,1:2][delta_N<0]
         g = self.equation.g(process_N[self.N],process_X[self.N])
         return u, g
-    
-class IDeepBSDER(deepBSDE):
-    def __init__(self, equation:Equation, result:nn.Module, grad:nn.ModuleList, disc:nn.ModuleList, model_params:dict) -> None:
-        super(IDeepBSDER,self).__init__(equation,result,grad,disc,model_params)
-
-    def forward(self, batch_size):
-        delta_t = (self.T - self.t) / self.N
-        process_N, process_X, discrete_t, delta_B = self.equation.get_positions(self.n, self.x, self.t, self.T, self.N, batch_size)
-        
-        g = self.equation.g(process_N[self.N],process_X[self.N])
-        for i in range(self.N):
-            j = self.N-i-1
-            grad_u = self.grad[j](process_N[j], process_X[j])
-            grad_bmm = torch.bmm(grad_u.unsqueeze(1), delta_B[j].unsqueeze(-1)).squeeze(-1)
-
-            f = self.equation.f(discrete_t[j+1], process_N[j+1], None, g, None)
-            g = g + f * delta_t - grad_bmm
-
-        u = self.result(process_N[0], process_X[0])
-        return u, g
 
 
 class MSELoss(nn.Module):
