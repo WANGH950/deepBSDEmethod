@@ -28,3 +28,16 @@ $$
 
 # How to use?
 We provide an invocation example in the Python Script "./example.py", where you can define and modify any of the components in the sample for testing.
+
+# Cite
+@Article{JML-3-2,
+ author = {Wang, Heng and Weihua, Deng},
+ title = {Solving Bivariate Kinetic Equations for Polymer Diffusion Using Deep Learning},
+ journal = {Journal of Machine Learning},
+ year = {2024},
+ volume = {3},
+ number = {2},
+ pages = {215--244},
+ issn = {2790-2048},
+ doi = {https://doi.org/10.4208/jml.240124}
+}
