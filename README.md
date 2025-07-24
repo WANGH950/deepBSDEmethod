@@ -29,7 +29,7 @@ $$
 # How to use?
 We provide an invocation example in the Python Script "./example.py", where you can define and modify any of the components in the sample for testing.
 
-# Cite
+# Citation
 @article{JMLWang,<br>
 &ensp;author = {Wang, Heng and Weihua, Deng},<br>
 &ensp;title = {Solving Bivariate Kinetic Equations for Polymer Diffusion Using Deep Learning},<br>
